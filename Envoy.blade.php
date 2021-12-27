@@ -1,12 +1,11 @@
-@servers(['staging' => 'osimi', 'prod' => 'posimi'])
+@servers(['staging' => 'server ip', 'prod' => 'server ip'])
 
 @setup
 $type = $type ?: "staging";
-$user = ($type === "staging") ? "osaimiautoroqay" : "alosaimiauto";
+$user = ($type === "staging") ? "staging user" : "prod user";
 $rootDir = "cd /home/{$user}/public_html";
 
-$teamsHook =
-"https://thetrans4mers.webhook.office.com/webhookb2/3993c23a-4f47-4c2f-a4c7-469d46fd88e7@ff78c7d4-c804-4473-a943-a9c2c521a03b/IncomingWebhook/d6fb1f6d30ab4f66b1dfd64aae385c7d/94741466-66d9-4a7a-aac1-6294a364e1f6";
+$teamsHook = "put MS Teams here";
 @endsetup
 
 @story('deploy')
